@@ -19,7 +19,7 @@
                     "description": "Used to express a graph.",
                     "type": ["array", "object"],
                     "additionalItems": {
-                        "anyOf": [
+                        "allOf": [
 			    { "$ref": "#/definitions/common" },
 			    { "$ref": "#/definitions/oa" }
 			]
@@ -29,7 +29,7 @@
         },
 	"oa": {
 	    "additionalProperties": false,
-	    "properties:": {
+	    "properties": {
 		"body": {
 		    "description": "the comment or other descriptive resource",
                     "type": "string",
@@ -60,7 +60,8 @@
 		    "type": "string",
 		    "format": "date-time"
 		}
-	    }
+	    },
+	    "required": ["target"]
 	},
         "common":{
             "additionalProperties": {
@@ -124,5 +125,5 @@
     ],
 
     "type": ["object", "array"],
-    "additionalProperties": true
+    "additionalProperties": false
 }

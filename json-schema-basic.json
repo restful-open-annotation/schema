@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product set",
+    "type": "object",
+    "properties": {
+        "@context": {
+            "description": "Used to define the short-hand names that are used throughout a JSON-LD document.",
+            "type": ["object", "string", "array", "null"]
+        },
+	"@graph": {
+	    "type": ["array"],
+	    "items": {
+		"type": ["object"],
+		"properties": {
+		    "body": {
+			"description": "the comment or other descriptive resource",
+			"type": "string",
+			"format": "uri"
+		    },
+		    "target": {
+			"description": "the body is somehow about",
+			"type": "string",
+			"format": "uri"
+		    },
+		    "annotatedBy":  {
+			"description": "the agent creating the annotation",
+			"type": "string",
+			"format": "uri"
+		    },
+		    "serializedBy": {
+			"description": "the agent serialzing the annotation",
+			"type": "string",
+			"format": "uri"
+		    },
+		    "serializedAt": {
+			"description": "the time when the annotation is serialized",
+			"type": "string",
+			"format": "date-time"
+		    },
+		    "annotatedAt": {
+			"description": "the time when the annotation is created",
+			"type": "string",
+			"format": "date-time"
+		    },
+		    "@id": {
+			"type": "string",
+			"format": "uri"
+		    }
+		},
+		"required": ["target", "@id"]
+	    }
+	}
+    }
+}
