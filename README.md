@@ -18,6 +18,7 @@ Json-schema.org community has developed a number of tool to either validate a js
 The following examples could be tested on [2], an online validator.
 
 Example 1:
+
 Correct:
 
 	{
@@ -39,6 +40,7 @@ Wrong:
 A "target" is mandatory according OA specs.
 
 Example 2:
+
 Correct:
 
 	{
@@ -62,6 +64,7 @@ Wrong:
 A "body" has to be a URI or following Web Annotation WG context [3].
 
 Example 3:
+
 Correct:
 
 	{
