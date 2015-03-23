@@ -88,5 +88,7 @@ The above example is because that an OA timestamp must be expressed in xsd:dateT
 
 # References
 [1] http://json-schema.org/implementations.html
+
 [2] http://json-schema-validator.herokuapp.com/index.jsp
+
 [3] http://www.w3.org/TR/2014/WD-annotation-model-20141211/#json-ld-context
