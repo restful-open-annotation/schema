@@ -4,7 +4,7 @@
 
     "definitions": {
 	"listOfUri": {
-	    "anyOf": [
+	    "oneOf": [
 		{
 		    "type": "string",
 		    "format": "uri"
@@ -37,7 +37,16 @@
 		"properties": {
 		    "body": {
 			"description": "the comment or other descriptive resource",
-			"$ref": "#/definitions/listOfUri"
+			"oneOf": [
+			    {"$ref": "#/definitions/listOfUri"},
+			    {
+				"type": "object",
+				"properties": {
+				    "@id": {"type": "string", "format": "uri"}
+				},
+				"additionalProperties": true
+			    }
+			]
 		    },
 		    "target": {
 			"description": "the body is somehow about",
